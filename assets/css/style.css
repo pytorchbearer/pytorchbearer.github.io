@@ -2,27 +2,27 @@ body {
   overflow-y: auto;
 }
 
-/* .top-content {
-    padding: 210px 0;
-} */
-
 .top-image{
   object-fit: cover;
   width: 100%;
-  height: 200px;
+  min-height: 200px;
 }
 
-@media only screen and (min-device-width: 480px) {
-  .top-image{
-    height: auto;
-  }
+.navbar {
+	background: #231F20;
+	-o-transition: all .6s; -moz-transition: all .6s; -webkit-transition: all .6s; -ms-transition: all .6s; transition: all .6s;
+	backface-visibility: hidden;
 }
 
-.navbar.navbar-no-bg {
-    background: #444;
-    background: rgba(0, 0, 0, 0.4)!important;
+.navbar-no-bg {
+  opacity: 0.66;
+  /* background: rgba(0, 0, 0, 0.66)!important; */
 }
 
-.bg-dark {
-  background-color: #231F20!important;
+.navbar-brand {
+  letter-spacing: 2px;
+}
+
+.code {
+  font-family: monospace, monospace;
 }
