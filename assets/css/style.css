@@ -1,22 +1,83 @@
 body {
-  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.top-image{
+div {
+  word-wrap: break-word!important;
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    opacity: 1!important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .top-image {
+    min-height: 0!important;
+  }
+}
+
+.nav-link {
+  opacity: 0;
+	-o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+.show .nav-link {
+  opacity: 1;
+}
+
+.dummy-top {
+  visibility: hidden;
+}
+
+.top-content {
+  z-index: -1000;
+  position: fixed;
+}
+
+.cover {
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  background-image: linear-gradient(rgba(29,29,27,1), rgba(29,29,27,0));
+  height: 200px;
+  width: 100%;
+}
+
+.top-image {
   object-fit: cover;
   width: 100%;
-  min-height: 200px;
+  min-height: 50vh;
+}
+
+.logo {
+  max-height : calc(50vh - 0.5rem);
+}
+
+@media (min-width: 576px) {
+  .logo {
+    max-height : calc(50vh - 3rem);
+  }
+}
+
+.navbar-brand, .nav-link, .navbar-toggler {
+  color: white!important;
+}
+
+.nav-link:hover {
+  background-color: rgba(225,232,236,0.33);
+  border-radius: 4px;
 }
 
 .navbar {
-	background: #231F20;
-	-o-transition: all .6s; -moz-transition: all .6s; -webkit-transition: all .6s; -ms-transition: all .6s; transition: all .6s;
+	background: rgba(0,46,59,1); /*29,29,27,1);*/
+	-o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 	backface-visibility: hidden;
 }
 
 .navbar-no-bg {
-  opacity: 0.66;
-  /* background: rgba(0, 0, 0, 0.66)!important; */
+  background-color: rgba(0,46,59,0); /*29,29,27,0);*/
 }
 
 .navbar-brand {
@@ -25,4 +86,68 @@ body {
 
 .code {
   font-family: monospace, monospace;
+}
+
+.left-col {
+  border-bottom: 2px solid rgb(239,125,0);
+  border-right: none;
+}
+
+@media (min-width: 576px) {
+  .left-col {
+    border-bottom: none;
+    border-right: 2px solid rgb(239,125,0);
+  }
+}
+
+.right-col {
+  border-radius: 4px;
+  text-align: center;
+  background-color: rgba(255,255,255,1);
+}
+
+.about-container, .docs-container {
+  background-color: white;
+}
+
+.install-container {
+  background-color: rgba(225,232,236,1);
+}
+
+.copy-icon {
+  color: rgb(73,89,97);
+  -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+  float: right;
+}
+
+.copy {
+  cursor: pointer;
+  color: black;
+  -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+.copy:hover, .copy:hover .copy-icon {
+  color: #E73238!important;
+}
+
+.icon-link {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: auto!important;
+  margin-bottom: auto!important;
+}
+
+.btn-primary {
+  background-color: rgba(30,135,101,0.85)!important;
+  border-color: rgba(30,135,101,1)!important;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
+  background-color: rgba(30,135,101,1)!important;
+  border-color: rgba(30,135,101,1)!important;
+}
+
+.btn-primary:active, .btn-primary:visited, .btn-primary:focus {
+  background-image: none!important;
+  box-shadow: none!important;
 }
