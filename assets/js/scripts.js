@@ -45,7 +45,7 @@ jQuery(document).ready(function() {
   $('.copy').on('click', function() {
     var $temp = $("<input>");
     $("body").append($temp);
-    $temp.val($(this).text()).select();
+    $temp.val($(this).text().trim()).select();
     document.execCommand("copy");
     $temp.remove();
     $(this).attr('data-original-title', "Copied!").tooltip('show');
