@@ -15,7 +15,7 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-no-bg">
     <div class="container">
       <a class="navbar-brand scroll-link" href="#top-content">
-        <!-- <img src="assets/img/logo_light.svg"> -->
+        <img src="assets/img/logo_light.svg" class="img-2x">
         PyTorchbearer
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,16 +24,16 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="https://github.com/pytorchbearer"><i class="fab fa-github fa-fw"></i></a>
+            <a class="nav-link scroll-link nav-2x" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link scroll-link" href="#about">About</a>
+            <a class="nav-link scroll-link nav-2x" href="#install">Install</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link scroll-link" href="#install">Install</a>
+            <a class="nav-link scroll-link nav-2x" href="#docs">Docs</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link scroll-link" href="#docs">Docs</a>
+					<li class="nav-item">
+            <a class="nav-link" href="https://github.com/pytorchbearer"><i class="fab fa-github fa-fw fa-2x"></i></a>
           </li>
         </ul>
       </div>
@@ -45,7 +45,7 @@
   </div> -->
 
   <div class="top-content">
-    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+    <div id="topCarousel" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="assets/img/banner/hummingbird.jpg" class="d-block w-100 top-image" alt="CNN Hummingbird Visualisation">
@@ -72,19 +72,29 @@
     </div>
   </div>
 
-  <div class="dummy-top">
+  <div class="dummy-top" id="swipeTarget">
     <img src="assets/img/banner/hummingbird.jpg" class="w-100 top-image">
   </div>
 
-  <div class="about-container p-sm-5 py-2">
+	<div class="p-3" style="background-color:white;">
+		<div class="container">
+			<ol id="topIndicators" class="carousel-indicators">
+				<li data-target="#topCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#topCarousel" data-slide-to="1"></li>
+				<li data-target="#topCarousel" data-slide-to="2"></li>
+			</ol>
+		</div>
+	</div>
+
+	<div class="about-container p-sm-5 py-2">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 px-5">
+        <div class="col-lg-4 px-5 hide-lg">
           <img src="assets/img/logo_dark.svg" class="w-100 logo">
         </div>
-        <div class="col-md-8">
+        <div class="col col-lg-8">
           <h1 class="display-4  mb-5">The Torchbearer Project</h1>
-          <p class="lead">PyTorchbearer is a set of libraries for PyTorch designed to aid deep learning research. The base package, torchbearer, is a model fitting library with a series of callbacks and metrics which support advanced visualisations and techniques. The two additional packages, visual and variational provide utilities for visualising convolutional networks and implementing variational auto-encoders.</p>
+					<p class="lead">PyTorchbearer is a set of libraries for PyTorch designed to aid deep learning research. The base package, torchbearer, is a model fitting library with a series of callbacks and metrics which support advanced visualisations and techniques. The two additional packages, visual and variational provide utilities for visualising convolutional networks and implementing variational auto-encoders.</p>
         </div>
       </div>
     </div>
@@ -270,47 +280,94 @@
 
   <div class="docs-container p-sm-5 py-2">
     <div class="container">
-      <div class="row">
-        <div class="mx-auto mb-5">
-          <h1 class="display-4">Docs</h1>
-        </div>
+      <div class="center mx-auto mb-5">
+        <h1 class="display-4">Docs</h1>
       </div>
-      <div class="row">
-        <div class="col-sm-4 mb-5">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">torchbearer</h5>
-              <p class="card-text">The core model fitting library. Go here to find out more about torchbearer and have a go at training some models.</p>
-              <a href="https://torchbearer.readthedocs.io" class="btn btn-primary w-100">Read the docs!</a>
-            </div>
+			<div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">torchbearer</h5>
+            <p class="card-text">The core model fitting library. Go here to find out more about torchbearer and have a go at training some models.</p>
           </div>
+					<div class="card-footer">
+						<a href="https://torchbearer.readthedocs.io" class="btn btn-primary w-100">Read the docs!</a>
+					</div>
         </div>
-        <div class="col-sm-4 mb-5">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">visual</h5>
-              <p class="card-text">[WIP] For visualising deep CNNs. Go here to learn about and implement state of the art visualisation techniques.</p>
-              <a href="https://visual.readthedocs.io" class="btn btn-primary w-100">Read the docs!</a>
-            </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">visual</h5>
+            <p class="card-text">[WIP] For visualising deep CNNs. Go here to learn about and implement state of the art visualisation techniques.</p>
           </div>
+					<div class="card-footer">
+						<a href="https://visual.readthedocs.io" class="btn btn-primary w-100">Read the docs!</a>
+					</div>
         </div>
-        <div class="col-sm-4 mb-5">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">variational</h5>
-              <p class="card-text">[WIP] For experimenting with Variational Auto-Enocders (VAEs). Go here to try out the latest developments in VAEs</p>
-              <a href="https://variational.readthedocs.io" class="btn btn-primary w-100">Read the docs!</a>
-            </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">variational</h5>
+            <p class="card-text">[WIP] For experimenting with Variational Auto-Enocders (VAEs). Go here to try out the latest developments in VAEs</p>
           </div>
+					<div class="card-footer">
+						<a href="https://variational.readthedocs.io" class="btn btn-primary w-100">Read the docs!</a>
+					</div>
         </div>
       </div>
     </div>
   </div>
 
+	<!-- <div class="examples-container p-sm-5 py-2">
+		<div class="container">
+      <div class="center mx-auto mb-5">
+        <h1 class="display-4">Examples</h1>
+      </div>
+			<a class="collapse-link" role="button" data-toggle="collapse" href="#torchbearer-deep" aria-expanded="false" aria-controls="collapseExample">
+				<div class="row p-3">
+					<div class="col right-col p-2 m-1">
+						Deep Learning
+						<div class="drop-icon">
+							<i class="fas fa-angle-down fa-fw"></i>
+						</div>
+					</div>
+				</div>
+		  </a>
+			<div class="px-sm-5">
+				<div class="collapse" id="torchbearer-deep">
+					<div class="card-deck">
+					  <div class="card">
+					    <img src="assets/img/examples/quickstart.png" class="card-img-top" alt="...">
+					    <div class="card-body">
+					      <h5 class="card-title">Card title</h5>
+					      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					    </div>
+					  </div>
+					  <div class="card">
+					    <img src="assets/img/examples/vae.png" class="card-img-top" alt="...">
+					    <div class="card-body">
+					      <h5 class="card-title">Card title</h5>
+					      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+					      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					    </div>
+					  </div>
+					  <div class="card">
+					    <img src="assets/img/examples/callbacks.png" class="card-img-top" alt="...">
+					    <div class="card-body">
+					      <h5 class="card-title">Card title</h5>
+					      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+					      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/b55dd4fa44.js"></script>
   <script src="assets/js/jquery.waypoints.min.js"></script>
+	<script src="assets/js/jquery.touchSwipe.min.js"></script>
   <script src="assets/js/scripts.js"></script>
 </body>

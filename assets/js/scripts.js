@@ -28,6 +28,34 @@ function scroll_to(clicked_link, nav_height) {
 
 jQuery(document).ready(function() {
   /*
+   * Top Carousel
+   */
+  $('#topCarousel').on('slide.bs.carousel', function(e) {
+    $('#topIndicators li:nth-child(' + (e.from + 1) + ')').removeClass('active');
+    $('#topIndicators li:nth-child(' + (e.to + 1) + ')').addClass('active');
+  });
+
+  $('#swipeTarget').swipe({
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction == 'right') {
+        $('#topCarousel').carousel('prev');
+      } else if (direction == 'left') {
+        $('#topCarousel').carousel('next');
+      }
+    }
+  });
+
+
+  // on('swiperight', function(e) {
+  //   console.log('test');
+  //   $('#topCarousel').carousel('next');
+  // });
+  //
+  // $('#swipeTarget').on('swipeleft', function(e) {
+  //   $('#topCarousel').carousel('prev');
+  // });
+
+  /*
    * Tootltips
    */
   $('[data-toggle="tooltip"]').tooltip();
@@ -69,4 +97,10 @@ jQuery(document).ready(function() {
     }
   });
 
+  /*
+   * Collapse icons
+   */
+   $('.collapse-link').on('click', function() {
+     $(this).toggleClass('down');
+   });
 });
