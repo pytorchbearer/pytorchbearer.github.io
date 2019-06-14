@@ -7,6 +7,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -31,6 +51,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link scroll-link nav-2x" href="#docs">Docs</a>
+          </li>
+					<li class="nav-item">
+            <a class="nav-link scroll-link nav-2x" href="#examples">Examples</a>
           </li>
 					<li class="nav-item">
             <a class="nav-link" href="https://github.com/pytorchbearer"><i class="fab fa-github fa-fw fa-2x"></i></a>
@@ -329,11 +352,63 @@
     </div>
   </div>
 
-	<!-- <div class="examples-container p-sm-5 py-2">
+	<div class="examples-container p-sm-5 py-2">
 		<div class="container">
       <div class="center mx-auto mb-5">
         <h1 class="display-4">Examples</h1>
       </div>
+			<a class="collapse-link" role="button" data-toggle="collapse" href="#torchbearer-general" aria-expanded="false" aria-controls="collapseExample">
+				<div class="row p-3">
+					<div class="col right-col p-2 m-1">
+						General
+						<div class="drop-icon">
+							<i class="fas fa-angle-down fa-fw"></i>
+						</div>
+					</div>
+				</div>
+			</a>
+			<div class="px-sm-5">
+				<div class="collapse" id="torchbearer-general">
+					<div class="card-columns">
+					  <div class="card">
+					    <img src="assets/img/examples/quickstart.jpg" class="card-img-top" alt="quickstart example image">
+					    <div class="card-body">
+					      <h5 class="card-title">Quickstart</h5>
+					      <p class="card-text">Get up and running with torchbearer, training a simple CNN on CIFAR-10.</p>
+					    </div>
+							<div class="card-footer">
+								<div class="row">
+									<a href="https://nbviewer.jupyter.org/github/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/quickstart.ipynb" style="display:block;" class="col col-4 nbviewer example-link">
+									</a>
+									<a href="https://github.com/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/quickstart.ipynb" style="display:block;" class="col col-4 center example-link">
+										<i class="fab fa-github fa-2x"></i>
+									</a>
+									<a href="https://colab.research.google.com/github/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/quickstart.ipynb" style="display:block;" class="col col-4 colab example-link">
+									</a>
+								</div>
+							</div>
+					  </div>
+					  <div class="card">
+					    <img src="assets/img/examples/callbacks.jpg" class="card-img-top" alt="callbacks example image">
+					    <div class="card-body">
+					      <h5 class="card-title">Callbacks</h5>
+					      <p class="card-text">A detailed exploration of callbacks in torchbearer, with some useful visualisations.</p>
+					    </div>
+							<div class="card-footer">
+								<div class="row">
+									<a href="https://nbviewer.jupyter.org/github/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/callbacks.ipynb" style="display:block;" class="col col-4 nbviewer example-link">
+									</a>
+									<a href="https://github.com/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/callbacks.ipynb" style="display:block;" class="col col-4 center example-link">
+										<i class="fab fa-github fa-2x"></i>
+									</a>
+									<a href="https://colab.research.google.com/github/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/callbacks.ipynb" style="display:block;" class="col col-4 colab example-link">
+									</a>
+								</div>
+							</div>
+					  </div>
+					</div>
+				</div>
+			</div>
 			<a class="collapse-link" role="button" data-toggle="collapse" href="#torchbearer-deep" aria-expanded="false" aria-controls="collapseExample">
 				<div class="row p-3">
 					<div class="col right-col p-2 m-1">
@@ -346,44 +421,64 @@
 		  </a>
 			<div class="px-sm-5">
 				<div class="collapse" id="torchbearer-deep">
-					<div class="card-deck">
-					  <div class="card">
-					    <img src="assets/img/examples/quickstart.png" class="card-img-top" alt="...">
-					    <div class="card-body">
-					      <h5 class="card-title">Card title</h5>
-					      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-					      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					    </div>
-					  </div>
-					  <div class="card">
-					    <img src="assets/img/examples/vae.png" class="card-img-top" alt="...">
-					    <div class="card-body">
-					      <h5 class="card-title">Card title</h5>
-					      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					    </div>
-					  </div>
-					  <div class="card">
-					    <img src="assets/img/examples/callbacks.png" class="card-img-top" alt="...">
-					    <div class="card-body">
-					      <h5 class="card-title">Card title</h5>
-					      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-					      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					    </div>
-					  </div>
+					<div class="card-columns">
 						<div class="card">
-					    <img src="assets/img/examples/optimisers.png" class="card-img-top" alt="...">
-					    <div class="card-body">
-					      <h5 class="card-title">Card title</h5>
-					      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-					      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-					    </div>
-					  </div>
+							<img src="assets/img/examples/vae.jpg" class="card-img-top" alt="vae example image">
+							<div class="card-body">
+								<h5 class="card-title">Training a VAE</h5>
+								<p class="card-text">A demonstration of how to train (add do a simple visualisation of) a Variational Auto-Encoder (VAE) on MNIST with torchbearer.</p>
+							</div>
+							<div class="card-footer">
+								<div class="row">
+									<a href="https://nbviewer.jupyter.org/github/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/vae.ipynb" style="display:block;" class="col col-4 nbviewer example-link">
+									</a>
+									<a href="https://github.com/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/vae.ipynb" style="display:block;" class="col col-4 center example-link">
+										<i class="fab fa-github fa-2x"></i>
+									</a>
+									<a href="https://colab.research.google.com/github/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/vae.ipynb" style="display:block;" class="col col-4 colab example-link">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="collapse-link" role="button" data-toggle="collapse" href="#torchbearer-diff" aria-expanded="false" aria-controls="collapseExample">
+				<div class="row p-3">
+					<div class="col right-col p-2 m-1">
+						Differentiable Programming
+						<div class="drop-icon">
+							<i class="fas fa-angle-down fa-fw"></i>
+						</div>
+					</div>
+				</div>
+		  </a>
+			<div class="px-sm-5">
+				<div class="collapse" id="torchbearer-diff">
+					<div class="card-columns">
+						<div class="card">
+							<img src="assets/img/examples/optimisers.jpg" class="card-img-top" alt="optimising functions example image">
+							<div class="card-body">
+								<h5 class="card-title">Optimising Functions</h5>
+								<p class="card-text">An example (and some fun visualisations) showing how torchbearer can be used for the purpose of optimising functions with respect to their parameters using gradient descent.</p>
+							</div>
+							<div class="card-footer">
+								<div class="row">
+									<a href="https://nbviewer.jupyter.org/github/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/basic_opt.ipynb" style="display:block;" class="col col-4 nbviewer example-link">
+									</a>
+									<a href="https://github.com/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/basic_opt.ipynb" style="display:block;" class="col col-4 center example-link">
+										<i class="fab fa-github fa-2x"></i>
+									</a>
+									<a href="https://colab.research.google.com/github/pytorchbearer/torchbearer/blob/master/docs/_static/notebooks/basic_opt.ipynb" style="display:block;" class="col col-4 colab example-link">
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

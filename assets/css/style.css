@@ -48,6 +48,34 @@ div {
   color: #E73238;
 }
 
+.colab {
+  background: url('../img/colab_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+}
+
+.nbviewer {
+  background: url('../img/nbviewer_logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+}
+
+.example-link, .example-link:active, .example-link:visited, .example-link:focus {
+  -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+  height: 2em!important;
+  cursor: pointer;
+  opacity: 0.66;
+  color: black;
+}
+
+.example-link:hover {
+  opacity: 1;
+}
+
 @media (min-width: 992px) {
   .nav-link {
     opacity: 1!important;
@@ -55,6 +83,10 @@ div {
 
   .hide-lg {
     display: block!important;
+  }
+
+  .card-columns {
+    column-count: 3!important;
   }
 }
 
@@ -166,6 +198,10 @@ div {
   .left-col {
     border-bottom: none;
     border-right: 2px solid rgb(239,125,0);
+  }
+
+  .card-columns {
+    column-count: 2;
   }
 }
 
