@@ -64,10 +64,21 @@ jQuery(document).ready(function() {
    * Navbar size change
    */
    $("#navbarNavDropdown").on('hidden.bs.collapse', function () {
-     Waypoint.refreshAll()
+     Waypoint.refreshAll();
    })
    $("#navbarNavDropdown").on('shown.bs.collapse', function () {
-     Waypoint.refreshAll()
+     Waypoint.refreshAll();
+   })
+
+   /*
+    * Navbar shade
+    */
+   $("#navbarNavDropdown").on('hide.bs.collapse', function () {
+     console.log('test');
+     $(".navbar").removeClass('open');
+   })
+   $("#navbarNavDropdown").on('show.bs.collapse', function () {
+     $(".navbar").addClass('open');
    })
 
   $('.copy').on('click', function() {

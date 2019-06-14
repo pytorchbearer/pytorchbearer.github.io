@@ -88,6 +88,10 @@ div {
   .card-columns {
     column-count: 3!important;
   }
+
+  .navbar-no-bg.navbar-expand-lg.open {
+    background-color: rgba(0,46,59,0);
+  }
 }
 
 @media (min-width: 1920px) {
@@ -166,6 +170,10 @@ div {
   color: white!important;
 }
 
+.navbar-toggler:focus, .navbar-toggler:active {
+  border-color: rgb(239,125,0);
+}
+
 .nav-link:hover {
   background-color: rgba(225,232,236,0.33);
   border-radius: 4px;
@@ -175,6 +183,10 @@ div {
 	background: rgba(0,46,59,1); /*29,29,27,1);*/
 	-o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 	backface-visibility: hidden;
+}
+
+.navbar-no-bg.open {
+  background-color: rgba(0,46,59,1);
 }
 
 .navbar-no-bg {
