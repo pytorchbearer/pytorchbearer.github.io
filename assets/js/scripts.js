@@ -74,7 +74,6 @@ jQuery(document).ready(function() {
     * Navbar shade
     */
    $("#navbarNavDropdown").on('hide.bs.collapse', function () {
-     console.log('test');
      $(".navbar").removeClass('open');
    })
    $("#navbarNavDropdown").on('show.bs.collapse', function () {
