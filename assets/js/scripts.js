@@ -97,13 +97,33 @@ jQuery(document).ready(function() {
   e.preventDefault();
   scroll_to($(this), $("nav").outerHeight());
   });
-  // toggle "navbar-no-bg" class
+
+  /*
+   * toggle "navbar-no-bg" class
+   */
   $(".dummy-top").waypoint({
-    handler: function() {
-      $("nav").toggleClass("navbar-no-bg");
+    handler: function(direction) {
+      if (direction == "up") {
+        $("nav").addClass("navbar-no-bg");
+      } else if (direction =="down") {
+        $("nav").removeClass("navbar-no-bg");
+      }
     },
     offset: function() {
       return - $(".dummy-top").outerHeight() + $("nav").outerHeight() + 1;
+    }
+  });
+
+  $(".dummy-top").waypoint({
+    handler: function(direction) {
+      if (direction == "up") {
+        $("nav").addClass("navbar-no-bg");
+      } else if (direction =="down") {
+        $("nav").removeClass("navbar-no-bg");
+      }
+    },
+    offset: function() {
+      return - $(".dummy-top").outerHeight() + $("nav").outerHeight() + 2;
     }
   });
 
