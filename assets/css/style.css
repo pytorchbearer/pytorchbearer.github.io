@@ -64,7 +64,7 @@ div {
   background-origin: content-box;
 }
 
-.example-link, .example-link:active, .example-link:visited, .example-link:focus {
+.example-link, .example-link:active, .example-link:link, .example-link:visited, .example-link:focus {
   -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
   height: 2em!important;
   cursor: pointer;
