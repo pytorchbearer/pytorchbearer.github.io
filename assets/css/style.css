@@ -171,7 +171,7 @@ div {
 }
 
 .navbar-toggler:focus, .navbar-toggler:active {
-  border-color: rgb(239,125,0);
+  outline-color: rgb(239,125,0);
 }
 
 .nav-link:hover {
