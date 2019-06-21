@@ -132,5 +132,6 @@ jQuery(document).ready(function() {
    */
    $(".collapse-link").on("click", function() {
      $(this).toggleClass("down");
+     $(this).siblings(".collapse-link").removeClass("down");
    });
 });
